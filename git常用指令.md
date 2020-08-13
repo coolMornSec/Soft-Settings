@@ -49,11 +49,8 @@
 > mkdir demoTest
 > cd demnomTest
 > git init
-> echo "#demoTest" >> README.md
 > git add README.md
 > git commit -m 'first create'
 > git remote add origin  https://code.newtouch.com/VZOP7H65/demo_csbps.git
 > git push -u origin master
 
-
-> git push origin master
