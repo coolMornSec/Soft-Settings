@@ -33,16 +33,22 @@
 > git log 查看提交历史
 > git reflog 查看命令历史
 > git reset --hard HEAD^  回退到上一版本
-> git reset --hard commit_id  回退到指定版本
-> git push
+> git reset --hard commit_id  回退到指定版本(前七八位)
+> git push -f origin dev      强制推送到远程分支
+
 ### 创建并切换到dev分支(相当于两条指令git branch dev git checkout dev)
 > git checkout -b 'dev'
 
 > git branch 查看当前分支
-> git merge 合并指定分支到当前分支
-> git branch -d dev 删除dev分支
-> git switch -c dev 创建并切换到新分支
-> git switch master 直接切换到已有分支
+> git branch -a 查看所有分支
+> git branch dev(分支名) 创建dev分支
+> git checkout dev(分支名) 切换到dev分支
+> git push origin dev 推送本地分支到远程dev分支（同名）
+> git branch --set-upstream-to=origin/dev 本地分支与远程dev分支建立关联
+
+> git branch -d dev 删除本地dev分支
+> git push origin delete dev 删除远程dev分支
+> git push origin :dev 删除远程dev分支
 
 
 ## 创建远程分支过程
@@ -54,3 +60,5 @@
 > git remote add origin  https://code.newtouch.com/VZOP7H65/demo_csbps.git
 > git push -u origin master
 
+
+## 保存和恢复进度 git stash
