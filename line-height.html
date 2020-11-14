@@ -1,0 +1,107 @@
+<!--
+ * @Author: whisperSec
+ * @objectDescription: 文件描述
+ * @Date: 2020-10-22 10:23:36
+ * @LastEditors: 最后编辑者
+ * @LastEditTime: 2020-10-31 15:32:52
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深入line-height</title>
+    <script src="./cookie.js"></script>
+    <script>
+        setCookie("whisper", "人间烟火");
+    </script>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        hr {
+            margin: 50px 0;
+        }
+        .line-con {
+            width: 330px;
+            height: 60px;
+            line-height: 30px;
+            font-size: 16px;
+            background-color: #eee;
+        }
+        .line-div {
+            width: 330px;
+            height: 60px;
+            font-size: 16px;
+            background-color: #eee;
+        }
+        .line-div div {
+            padding: 7px 0;
+            line-height: 16px;
+        }
+        .phx {
+            line-height: 50px;
+            margin-top: 20px;
+            font-size: 50px;
+            color: #ba7ff1;
+            font-family: "楷体";
+        }
+        .lb {
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 1ex solid #ba7ff1;
+            border-right: 1ex solid transparent;
+            border-bottom: 0 solid transparent;
+            border-left: 1ex solid transparent;
+        }
+        /*
+         * ? fdsaf
+         */
+        /* 1ex */
+        /* 设置数字 相当于 1.5*font-size */
+    </style>    
+</head>
+<body>
+    <!-- !此处为红色注释 -->
+    <!-- ?此处为蓝色注释 -->
+    <!-- *此处为亮绿色注释 -->
+    <!-- //此处为删除注释 -->
+    <!-- todo 此处为橙色注释 -->
+    <!-- -此处为自定义注释 -->
+    <div class="container">
+
+        <div class="line-con">
+            日出换日落，真爱换寂寞。
+            风缓缓移动，梦闪烁如霓虹，
+            谁在窗外弹琴，弹谁的曾经。
+        </div>
+        <div class="line-div">
+            <div>
+                日出换日落，真爱换寂寞。
+                风缓缓移动，梦闪
+            </div>
+            <div>
+                烁如霓虹，
+                谁在窗外弹琴，弹谁的曾经。
+            </div>
+        </div>
+    
+    </div>
+    <div class="phx">
+        <!-- Sphenix -->
+        云等风，风等我x
+        <div class="lb"></div>
+    </div>
+    <hr>
+    <div>
+        行高(line-height)，即一行文字的高度，从规范上来说是两行文字基线之间的距离。
+        字母x在css里扮演一个很重要的角色，因为字母x的下边缘就是基线所在的位置。而
+        x-height指的就是字母x的高度，ex是一个尺寸单位，其大小相对字母x来计算，1ex就表示一个字母x的高度。
+        对于vertical-align，其默认值就是baseline也就是字母x的下边缘。
+    </div>
+    
+</body>
+</html>

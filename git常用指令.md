@@ -1,3 +1,4 @@
+
 ## Git常用指令
 
 
@@ -46,8 +47,8 @@
 > git push origin dev 推送本地分支到远程dev分支（同名）
 > git branch --set-upstream-to=origin/dev 本地分支与远程dev分支建立关联
 
+### 删除远程分支
 > git branch -d dev 删除本地dev分支
-> git push origin delete dev 删除远程dev分支
 > git push origin :dev 删除远程dev分支
 
 
